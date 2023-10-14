@@ -12,6 +12,7 @@ const result_p = document.querySelector(".res > p");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissor_div = document.getElementById("s");
+//-----------------------------------------------------
 
 // Function to get the computer's choice
 function getComputerChoice() {
