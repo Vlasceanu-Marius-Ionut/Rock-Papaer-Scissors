@@ -16,7 +16,6 @@ const btrn = document.querySelector("button");
 //-----------------------------------------------------
 
 //Function to reset the score
-
 function resetScore() {
   userScore = 0;
   computerScore = 0;

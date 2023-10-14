@@ -99,7 +99,7 @@ button{
 }
 @media(max-width:500px){
     .choice img {
-        width: 100px;
+        width: 65px;
     }
     .res > p{
         font-size: 20px;
@@ -114,7 +114,7 @@ button{
 
 @media(max-width:768px){
     .choice img {
-        width: 150px;
+        width: 120px;
     }
     .res > p{
         font-size: 30px;
@@ -126,7 +126,7 @@ button{
 
 @media(max-width:630px){
     .choice img {
-        width: 120px;
+        width: 100px;
     }
     .res > p{
         font-size: 27px;
@@ -137,7 +137,7 @@ button{
 }
 @media(max-width:470px){
     .choice img {
-        width: 90px;
+        width: 70px;
     }
     .res > p{
         font-size: 20px;
@@ -152,7 +152,7 @@ button{
 
 @media(max-width:390px){
     .choice img {
-        width: 70px;
+        width: 65px;
     }
     .res > p{
         font-size: 20px;
