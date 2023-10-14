@@ -13,6 +13,7 @@ const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissor_div = document.getElementById("s");
 const btrn = document.querySelector("button");
+btrn.addEventListener("click", resetScore);
 //-----------------------------------------------------
 
 //Function to reset the score
@@ -23,8 +24,6 @@ function resetScore() {
   computerScore_span.textContent = computerScore;
   result_p.textContent = "Score reset.";
 }
-
-btrn.addEventListener("click", resetScore);
 // Function to get the computer's choice
 function getComputerChoice() {
   const choices = ["r", "p", "s"];
