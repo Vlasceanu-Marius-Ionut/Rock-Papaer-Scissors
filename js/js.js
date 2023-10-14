@@ -1,38 +1,66 @@
 "use strict";
 
-//AVG VAR
-const userScore = 0;
-const computerScore = 0;
-//DOM
+// Initialize scores
+let userScore = 0;
+let computerScore = 0;
+
+// DOM elements
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
 const scoreBoard_div = document.querySelector(".score-board");
-const result_div = document.querySelector(".res > p");
+const result_p = document.querySelector(".res > p");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissor_div = document.getElementById("s");
-//DOM_CASH
 
-//play the game
+// Function to get the computer's choice
 function getComputerChoice() {
   const choices = ["r", "p", "s"];
-  const randomNumber = Math.floor(Math.random() * 3); //never go over 3;
-
+  const randomNumber = Math.floor(Math.random() * 3);
   return choices[randomNumber];
 }
-//win-function
-function wins(userChoice, computerChoice) {
-  userScore++;
-  userScore_span.innerHTML = userScore;
-  computerScore_span = computerScore;
-  result_div.innerHTML = userChoice + " beats" + computerChoice + ". You win!";
-}
-//
-function lose() {}
-function draw() {
-  console.log("DRAW");
+
+// Function to convert a choice letter to the corresponding word
+function convertToWord(letter) {
+  if (letter === "r") {
+    return "Rock";
+  }
+  if (letter === "p") {
+    return "Paper";
+  }
+  if (letter === "s") {
+    return "Scissors";
+  }
 }
 
+// Function to update the result and scores for a win
+function wins(userChoice, computerChoice) {
+  userScore++;
+  userScore_span.textContent = userScore;
+  computerScore_span.textContent = computerScore;
+  result_p.textContent = `${convertToWord(userChoice)} beats ${convertToWord(
+    computerChoice
+  )}. You win!`;
+}
+
+// Function to update the result for a loss
+function lose(userChoice, computerChoice) {
+  computerScore++;
+  userScore_span.textContent = userScore;
+  computerScore_span.textContent = computerScore;
+  result_p.textContent = `${convertToWord(
+    computerChoice
+  )} beats ${convertToWord(userChoice)}. You lose!`;
+}
+
+// Function to update the result for a draw
+function draw(userChoice, computerChoice) {
+  result_p.textContent = `${convertToWord(userChoice)} equals ${convertToWord(
+    computerChoice
+  )}. It's a draw!`;
+}
+
+// Function to play the game
 function game(userChoice) {
   const computerChoice = getComputerChoice();
   const result = userChoice + computerChoice;
@@ -41,7 +69,7 @@ function game(userChoice) {
     case "rs":
     case "pr":
     case "sp":
-      wins(userChoice + computerChoice);
+      wins(userChoice, computerChoice);
       break;
     case "rp":
     case "ps":
@@ -56,16 +84,15 @@ function game(userChoice) {
   }
 }
 
-//event listeners
-function main() {
-  rock_div.addEventListener("click", function () {
-    game("r");
-  });
-  paper_div.addEventListener("click", function () {
-    game("p");
-  });
-  scissor_div.addEventListener("click", function () {
-    game("s");
-  });
-}
-main();
+// Add event listeners for user choices
+rock_div.addEventListener("click", function () {
+  game("r");
+});
+
+paper_div.addEventListener("click", function () {
+  game("p");
+});
+
+scissor_div.addEventListener("click", function () {
+  game("s");
+});
