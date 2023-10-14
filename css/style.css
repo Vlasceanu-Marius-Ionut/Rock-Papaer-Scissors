@@ -6,6 +6,8 @@
 }
 body {
     background-color: rgba(0, 0, 0, 0.807);
+    width: 100%;
+    height: auto;
 }
 
 header {
@@ -84,4 +86,99 @@ header > h1 {
     font-size: 40px;
     font-family: sans-serif;
     padding: 12px;
+}
+
+
+@media(max-width:500px){
+    .choice img {
+        width: 100px;
+    }
+    .res > p{
+        font-size: 20px;
+    }
+    #action-msj{
+        font-size: 30px;
+    }
+    header {
+        width: 100%;
+    }
+}
+
+@media(max-width:768px){
+    .choice img {
+        width: 150px;
+    }
+    .res > p{
+        font-size: 30px;
+    }
+    #action-msj{
+        font-size: 25px;
+    }
+}
+
+@media(max-width:630px){
+    .choice img {
+        width: 120px;
+    }
+    .res > p{
+        font-size: 27px;
+    }
+    #action-msj{
+        font-size: 27px;
+    }
+}
+@media(max-width:470px){
+    .choice img {
+        width: 90px;
+    }
+    .res > p{
+        font-size: 20px;
+    }
+    #action-msj{
+        font-size: 30px;
+    }
+    header {
+        width: 100%;
+    }
+}
+
+@media(max-width:390px){
+    .choice img {
+        width: 70px;
+    }
+    .res > p{
+        font-size: 20px;
+    }
+    #action-msj{
+        font-size: 30px;
+    }
+    header {
+        width: 100%;
+    }
+    .score-board{
+        width:50% ;
+    }
+    html {
+        font-size: 20px;
+    }
+}
+@media(max-width:360px){
+    .choice img {
+        width: 65px;
+    }
+    .res > p{
+        font-size: 15px;
+    }
+    #action-msj{
+        font-size: 25px;
+    }
+    header {
+        width: 100%;
+    }
+    .score-board{
+        width:50% ;
+    }
+    html {
+        font-size: 15px;
+    }
 }
