@@ -1,2 +1,2 @@
 # Rock-Papaer-Scissors
-Learning purpose
+Learning purpose.
